@@ -14,7 +14,6 @@ public class Main {
         StreamExecutionEnvironment env = ExecutionEnvUtil.prepare(parameterTool);
         DataStreamSource<Metrics> data = KafkaConfigUtil.buildSource(env);
         data.print();
-
         env.execute("flink learning cep");
     }
 }
